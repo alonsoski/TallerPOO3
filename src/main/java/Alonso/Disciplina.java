@@ -58,6 +58,8 @@ public class Disciplina {
     }
 
     public void getInfo() {
-        throw new UnsupportedOperationException();
+        System.out.println("nombre:"+this.nombre);
+        System.out.println("numero de participantes:"+this.numPart);
+        System.out.println("record:"+this.record);
     }
 }

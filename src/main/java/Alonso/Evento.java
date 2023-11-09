@@ -21,7 +21,7 @@ public class Evento {
     }
 
     public void setEquipos(ArrayList<Equipo> equipos) {
-        throw new UnsupportedOperationException();
+        this.equipos=equipos;
     }
 
     public Date getFecha() {
@@ -41,7 +41,7 @@ public class Evento {
     }
 
     public void eliminarAtleta(Atleta atleta) {
-        throw new UnsupportedOperationException();
+
     }
 
     public String getInfo() {
