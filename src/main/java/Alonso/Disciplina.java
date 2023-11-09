@@ -6,12 +6,13 @@ public class Disciplina {
     private String nombre;
     private int numPart;
     private String record;
+    private ArrayList<Atleta>participantes;
 
-
-    public Disciplina(String nombre,String record,ArrayList<Equipo>equipos){
+    public Disciplina(String nombre,String record,int numPart){
         this.nombre = nombre;
         this.record = record;
-        this.numPart = obtenerParticipantes(equipos);
+        this.numPart = numPart;
+        this.participantes=new ArrayList<>();
     }
 
     private int obtenerParticipantes(ArrayList<Equipo> equipos) {
@@ -23,29 +24,37 @@ public class Disciplina {
         }
         return participantes;
     }
-
-    public void getNombre() {
-        throw new UnsupportedOperationException();
+    public void anadiratleta(Atleta atleta){
+        if (this.participantes.size()>=numPart){
+            System.out.println("maximo de participantes alcanzado");
+        }else {
+            this.participantes.add(atleta);
+            System.out.println("añadido");
+        }
     }
 
-    public void getNumPart() {
-        throw new UnsupportedOperationException();
+    public String getNombre() {
+        return this.nombre;
     }
 
-    public void getRecord() {
-        throw new UnsupportedOperationException();
+    public int getNumPart() {
+        return this.numPart;
     }
 
-    public void setNombre() {
-        throw new UnsupportedOperationException();
+    public String getRecord() {
+        return this.record;
     }
 
-    public void setNumPart() {
-        throw new UnsupportedOperationException();
+    public void setNombre(String nombre) {
+        this.nombre=nombre;
     }
 
-    public void setRecord() {
-        throw new UnsupportedOperationException();
+    public void setNumPart(int numPart) {
+        this.numPart=numPart;
+    }
+
+    public void setRecord(String record) {
+        this.record=record;
     }
 
     public void getInfo() {

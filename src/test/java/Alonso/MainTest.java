@@ -9,9 +9,10 @@ public class MainTest {
 
 
     void atletaTest(){
+        ArrayList<Equipo>equipos = new ArrayList<>();
         ArrayList<Disciplina> disciplina=new ArrayList<>();
-        Disciplina d = new Disciplina()
-        Atleta at = new Atleta("nombreA","Chile",);
+        Disciplina d = new Disciplina("natacion","15 min",14)
+
     }
 
 
